@@ -9,7 +9,7 @@ public class sortarray {
         System.out.println(Arrays.toString(arr));
     }
 
-    static int staticresponce(int[] arr) {
+    static void staticresponce(int[] arr) {
         for (int pass = 0; pass < arr.length - 1; pass++) {
             int i = 0;
             while (i < arr.length - 1) {
@@ -22,7 +22,6 @@ public class sortarray {
                 i++;
             }
         }
-        return -1;
     }
 
 
