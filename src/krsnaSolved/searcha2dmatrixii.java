@@ -10,21 +10,22 @@ public class searcha2dmatrixii {
                 {9,12,20,30}
         };
         int target = 30;
-        boolean ans = search(matrix,target);
-        System.out.println((ans));
+        int[] ans = search(matrix,target);
+        System.out.println((Arrays.toString(ans)));
     }
-    static boolean search(int[][] matrix,int target){
+    static int[] search(int[][] matrix,int target){
         int row = 0;
         int col = matrix[0].length - 1;
         while(row < matrix.length && col >= 0){
-            if(matrix[row][col] == target){
-                return true;
+            if(target == matrix[row][col]){
+                return new int[]{row,col};
             }
-            if(matrix[row][col] < target){
+            if (target > matrix[row][col]){
                 row ++;
-            }else{
+            }
+            else {
                 col --;
             }
-        }return false;
+        }return new int[]{-1,-1};
     }
 }
