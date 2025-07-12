@@ -10,24 +10,17 @@ public class SelectionSortDemo {
     }
 
     static void selectionSort(int[] arr) {
-        int n = arr.length;
-
-        for (int i = 0; i < n - 1; i++) {
+        for(int i = 0;i<arr.length-1;i++){
             int minIndex = i;
-
-            // Find the index of the minimum element in the remaining array
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
+            for(int j = i + 1;j<arr.length;j++)
+            {
+                if(arr[minIndex]>arr[j]){
                     minIndex = j;
                 }
             }
-
-            // Swap the found minimum element with the first element
-            if (minIndex != i) {
-                int temp = arr[minIndex];
-                arr[minIndex] = arr[i];
-                arr[i] = temp;
-            }
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
         }
     }
 }
