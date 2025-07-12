@@ -2,7 +2,7 @@ package krsnaSolved;
 
 public class findMissingValue {
     public static void main(String[] args) {
-        int[] arr = {3,1,0};
+        int[] arr = {1,2,3,4,6};
         int ans = missingNumber(arr);
         System.out.println(ans);
     }
@@ -17,7 +17,7 @@ public class findMissingValue {
                     i++;
                 }
             }
-            for (int j = 0;j < n;j++){
+            for (int j = arr[0];j < n;j++){
                 if(arr[j]!=j){
                     return j;
                 }
