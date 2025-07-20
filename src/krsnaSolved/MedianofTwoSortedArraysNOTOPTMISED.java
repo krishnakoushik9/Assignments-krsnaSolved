@@ -4,12 +4,12 @@ public class MedianofTwoSortedArraysNOTOPTMISED {
     public static void main(String[] args) {
         int[] arr1 = {1,2,5};
         int[] arr2 = {3,4,9};
-        int[] merged = nonoptimisedsol(arr1, arr2);
+        int[] merged = findMedianSortedArrays(arr1, arr2);
         sort(merged);
         double ans = mid(merged);
         System.out.println(ans);
     }
-    public static int[] nonoptimisedsol(int[] arr1,int[] arr2){
+    public static int[] findMedianSortedArrays(int[] arr1,int[] arr2){
         //let's sort it here
         int[] result = new int[arr1.length + arr2.length];
         for(int i = 0;i< arr1.length;i++){
