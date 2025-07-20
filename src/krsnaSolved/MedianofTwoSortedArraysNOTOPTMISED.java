@@ -12,9 +12,10 @@ public class MedianofTwoSortedArraysNOTOPTMISED {
     public static int[] findMedianSortedArrays(int[] arr1,int[] arr2){
         //let's sort it here
         int[] result = new int[arr1.length + arr2.length];
-        for(int i = 0;i< arr1.length;i++){
+        for(int i = 0;i< arr1.length;i++) {
             result[i] = arr1[i];
         }
+        //Needs to be optimised
         for(int i = 0;i< arr2.length;i++){
             result[arr1.length + i] = arr2[i];
         }
