@@ -3,7 +3,7 @@ package krsnaSolved;
 public class MedianofTwoSortedArraysNOTOPTMISED {
     public static void main(String[] args) {
         int[] arr1 = {1,2,5};
-        int[] arr2 = {3,4,8};
+        int[] arr2 = {3,4,9};
         int[] merged = nonoptimisedsol(arr1, arr2);
         sort(merged);
         double ans = mid(merged);
