@@ -15,7 +15,7 @@ public class findMissingValues2 {
                 if (arr[i] != arr[correct]) {
                         swap(arr, i, correct);
                 } else {
-                        return arr[i]; // 🔁 duplicate found
+                        return arr[i]; //
                 }
                 } else {
                     i++;
