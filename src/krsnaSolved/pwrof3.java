@@ -14,5 +14,4 @@ public class pwrof3 {
         }
         return n == 1;
     }
-
 }
