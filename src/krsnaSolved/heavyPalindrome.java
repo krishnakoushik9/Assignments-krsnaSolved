@@ -8,14 +8,9 @@ public class heavyPalindrome {
     public static char palindromeRemovalIndex(String s) {
         int left = 0, right = s.length() - 1;
         while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
-                if (isPalindrome(s.substring(left + 1, right + 1))){
-                    return s.charAt(left);
-                }
-                else if (isPalindrome(s.substring(left, right))){
-                    return s.charAt(right);
-                }
-            }
+            if (s.charAt(left) != s.charAt(right))
+                if (isPalindrome(s.substring(left + 1, right + 1))) return s.charAt(left);
+                else if (isPalindrome(s.substring(left, right))) return s.charAt(right);
             left++;
             right--;
         }
