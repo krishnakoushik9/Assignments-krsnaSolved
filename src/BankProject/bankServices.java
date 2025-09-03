@@ -110,6 +110,7 @@ public class bankServices {
     private static void intializeBank(){
         bankAccount = new ICICI_Bank();
         bankAccount.ICICI();
+        bankAccount.createAccount("Anil",80194355,"hsb3455","Male",45000,true,1156);
         bankAccount.createUserPin();
     }
 
