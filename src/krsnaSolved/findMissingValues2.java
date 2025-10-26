@@ -4,7 +4,7 @@ public class findMissingValues2 {
     public static void main(String[] args) {
         int[] arr = {1,4,5,2,2,7,4};
         int ans = findDuplicate(arr);
-        System.out.println();
+        System.out.println(ans);
 
     }
     public static int findDuplicate(int[] arr) {
