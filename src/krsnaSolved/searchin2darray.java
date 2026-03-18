@@ -5,13 +5,14 @@ public class searchin2darray {
         int[][] matrix = {
                 {2,3,6},
                 {9,12,44},
-                {15,67,1}
+                {15,67,52},
+                {18,73,87}
         };
-        int target =2;
+        int target =67;
         System.out.println(searchMatrix(matrix,target));
     }
 
-    private static boolean searchMatrix(int[][] matrix, int target) {
+    private static int searchMatrix(int[][] matrix, int target) {
         int start = 0;
         int m = matrix.length;
         int n = matrix[0].length;
@@ -26,8 +27,8 @@ public class searchin2darray {
                 end = mid - 1;
             }
             else {
-                return true;
+                return mid;
             }
-        }return false;
+        }return -1;
     }
 }

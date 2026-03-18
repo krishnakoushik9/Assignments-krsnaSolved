@@ -1,0 +1,46 @@
+package krsnaSolved.AdvancedDSA;
+
+public class LongestPalindrome {
+    public static void main(String[] args) {
+        String s1 = "babad";
+        System.out.println("Longest palindrome in '" + s1 + "': " + longestPalindrome(s1));  // Output: bab
+    }
+    
+    public static String longestPalindrome(String s) {
+        if (s == null || s.length() == 0) {
+            return ""; // Handle null or empty input
+        }
+
+        int n = s.length();
+        int start = 0;
+        int end = 0;
+
+        for (int i = 0; i < n; i++) {
+            // Odd-length palindromes
+            int left = i;
+            int right = i;
+            while (left >= 0 && right < n && s.charAt(left) == s.charAt(right)) {
+                if (right - left + 1 > end - start) {
+                    start = left;
+                    end = right;
+                }
+                left--;
+                right++;
+            }
+
+            // Even-length palindromes
+            left = i;
+            right = i + 1;
+            while (left >= 0 && right < n && s.charAt(left) == s.charAt(right)) {
+                if (right - left + 1 > end - start) {
+                    start = left;
+                    end = right;
+                }
+                left--;
+                right++;
+            }
+        }
+
+        return s.substring(start, end + 1);
+    }
+}
